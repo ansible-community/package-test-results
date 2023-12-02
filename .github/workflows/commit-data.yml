@@ -93,6 +93,8 @@ jobs:
     permissions:
       contents: write
     if: "inputs.push"
+    needs:
+      - generate
     steps:
       - name: Checkout test_results
         uses: actions/checkout@v4
