@@ -41,7 +41,7 @@ Note that this is only a subset of the required sanity tests. Please make sure y
 The following files differ between the `{{ tag_output.tag }}` git tag and `{{ artifact }}` on Ansible Galaxy:
 
 {% for file in file_errors %}
-- {{ file.file }} (`{{ file.error }}`{{ (" : " ~ file.message) if "message" in file else "" }})
+- `{{ file.file }}` (`{{ file.error }}`{{ (" : " ~ file.message) if "message" in file else "" }})
 {% endfor %}
 
 {% endif %}
