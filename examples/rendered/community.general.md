@@ -1,6 +1,6 @@
 # Community package requirements: sanity tests
 
-(Note: This issue was filed in a semi-automated fashion. Let me know if you see errors in its the issue.)
+(Note: This issue was filed in a semi-automated fashion. Let me know if you see errors in this issue.)
 
 As per the [Ansible community package inclusion requirements][ci-testing], collections must pass `ansible-test sanity` tests. Version `8.0.2` of `community.general`, corresponding to the `8.0.2` tag in this repo, fails one or more of the required sanity tests.
 

@@ -1,6 +1,6 @@
 # Community package requirements: sanity tests and repository management
 
-(Note: This issue was filed in a semi-automated fashion. Let me know if you see errors in its the issue.)
+(Note: This issue was filed in a semi-automated fashion. Let me know if you see errors in this issue.)
 
 As per the [Ansible community package inclusion requirements][ci-testing], collections must pass `ansible-test sanity` tests. Version `23.3.1` of `awx.awx`, corresponding to the `23.3.1` tag in this repo, fails one or more of the required sanity tests.
 
