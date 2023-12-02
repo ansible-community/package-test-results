@@ -13,7 +13,7 @@ Thank you for your efforts and for being part of the Ansible package! We appreci
 
 ---
 
-## Sanity test failures
+## Sanity tests
 
 The following tests were run using `ansible-test` version `{{ env_details.ansible_test_version }}`:
 

@@ -9,7 +9,7 @@ Thank you for your efforts and for being part of the Ansible package! We appreci
 
 ---
 
-## Sanity test failures
+## Sanity tests
 
 The following tests were run using `ansible-test` version `2.16.0`:
 
