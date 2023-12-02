@@ -84,11 +84,26 @@ def get_test_name(path: str) -> str:
     return path.removeprefix("ansible-test-sanity-").removesuffix(".json")
 
 
+def get_issue_title(collection: str, sargs: Args) -> str:
+    has_file_errors = collection in sargs.upstreams_data["collections"]
+    title = "Community package requirements: sanity tests"
+    if has_file_errors:
+        title += " and repository management"
+    return title
+
+
 @app.command()
-def render(ctx: typer.Context, collection_: str) -> None:
+def render(
+    ctx: typer.Context,
+    collection_: str,
+    add_title: bool = typer.Option(False, "-T", "--add-title"),
+) -> None:
     sargs = ctx.ensure_object(Args)
     collection = CollectionName(collection_)
     rendered = render_issue(collection, sargs)
+    if add_title:
+        title = get_issue_title(collection, sargs)
+        rendered = f"# {title}\n\n" + rendered.lstrip("\n")
     print(rendered)
 
 
@@ -96,10 +111,7 @@ def render(ctx: typer.Context, collection_: str) -> None:
 def issue(ctx: typer.Context, collection_: str) -> None:
     sargs = ctx.ensure_object(Args)
     collection = CollectionName(collection_)
-    has_file_errors = collection in sargs.upstreams_data["collections"]
-    title = "Community package requirements: sanity tests"
-    if has_file_errors:
-        title += " and repository management"
+    title = get_issue_title(collection, sargs)
     body = render_issue(collection, sargs)
 
     # `repository` shouldn't be None, mypy.
