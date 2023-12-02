@@ -1,5 +1,5 @@
 ---
-title: Community package requirements: sanity tests and repository management
+title: "Community package requirements: sanity tests and repository management"
 ---
 As per the [Ansible community package inclusion requirements][ci-testing], collections must pass `ansible-test sanity` tests. Version `3.2.0` of `ovirt.ovirt`, corresponding to the `3.2.0-1` tag in this repo, fails one or more of the required sanity tests.
 
