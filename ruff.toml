@@ -1,0 +1,29 @@
+# Copyright (C) 2023 Maxwell G <maxwell@gtmx.me>
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+select = [
+    "A",    # flake8-builtins
+    "ARG",  # unused-arguments
+    "B",    # flake8-bugbear
+    "E",    # pycodestyle errors
+    "F",    # pyflakes
+    "PL",   # pylint
+    "SIM",  # flake8-simplify
+    "W",    # pycodestyle warnings
+]
+ignore = [
+    # function-call-in-default-argument
+    # There's nothing wrong with calling a function that returns an immutable
+    # object
+    "B008",
+    # `zip()` without an explicit `strict=` parameter.
+    # `zip()` only has that parameter in py310+
+    "B905",
+    # Allow overwriting loop variable
+    "PLW2901",
+    # Magic value used in comparison
+    # This is a good rule, but the checker is a bit overzealous.
+    "PLR2004",
+    # Too many arguments to function call
+    "PLR0913",
+]
