@@ -89,7 +89,7 @@ jobs:
           path: "test_results/build/patches/"
   commit:
     name: Commit and push data
-    runs-on: ubunut-latest
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     if: "inputs.push"
