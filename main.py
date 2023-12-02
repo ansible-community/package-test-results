@@ -13,12 +13,12 @@ from collections import Counter
 from collections.abc import Iterable, Iterator
 from functools import cached_property
 from pathlib import Path
-from typing import TYPE_CHECKING, TypedDict
+from typing import TYPE_CHECKING, TypedDict, cast
 
 import jinja2
 import pyperclip  # type: ignore[import]
 import typer
-from antsibull.sanity_tests import CollectionOutput
+from antsibull.sanity_tests import CollectionOutput, IgnoreEntry
 from antsibull.types import CollectionName, make_collection_mapping
 from antsibull_core.yaml import load_yaml_file
 from yarl import URL
@@ -117,16 +117,22 @@ def issue(ctx: typer.Context, collection_: str) -> None:
 
 def render_issue(collection: CollectionName, sargs: Args) -> str:
     sanity_data = sargs.data["collections"][collection]
-    test_json = sanity_data["sanity"]["test_json"]
+    sanity = sanity_data["sanity"]
+    test_json = sanity["test_json"]
     tags_data = sargs.tags_data[collection]
     file_errors = sargs.upstreams_data["collections"].get(collection) or []
+    invalid_ignores = [
+        IgnoreEntry(**data) for data in cast(dict, sanity["banned_ignore_entries"])
+    ]
 
     tvars = {
         "collection_name": collection,
         "test_json": test_json,
+        "invalid_ignores": invalid_ignores,
         "tag_output": tags_data,
         "file_errors": file_errors,
         "env_details": sargs.data["env_details"],
+        "ignores_file": sanity.get("ignores_file"),
     }
     return env.get_template("issue.md").render(**tvars)
 

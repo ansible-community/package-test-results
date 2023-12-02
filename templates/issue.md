@@ -1,4 +1,5 @@
 {% set artifact = collection_name.replace(".", "-") ~ "-" ~ tag_output.version ~ ".tar.gz" %}
+(Note: This issue was filed in a semi-automated fashion. Let me know if you see errors in its the issue.)
 
 As per the [Ansible community package inclusion requirements][ci-testing], collections must pass `ansible-test sanity` tests. Version `{{ tag_output.version }}` of `{{ collection_name }}`, corresponding to the `{{ tag_output.tag }}` tag in this repo, fails one or more of the required sanity tests.
 
@@ -22,6 +23,7 @@ The following tests were run using `ansible-test` version `{{ env_details.ansibl
 
 Note that this is only a subset of the required sanity tests. Please make sure you run them in all in your CI.
 
+{% if test_json %}
 ### Results
 
 {% for file in test_json.values() %}
@@ -34,6 +36,21 @@ Note that this is only a subset of the required sanity tests. Please make sure y
 
 {% endfor %}
 {% endfor %}
+{% endif %}
+
+{% if invalid_ignores %}
+### Invalid test ignores
+
+`{{ ignores_file }}` contain ignores that are forbidden by the [CI testing requirements][ci-testing]:
+
+``` text
+{% for ignore in invalid_ignores %}
+{{ ignore.as_str() }}
+{% endfor %}
+```
+
+Please fix these issues and remove the ignore entries.
+{% endif %}
 
 {% if file_errors %}
 ## File divergences
