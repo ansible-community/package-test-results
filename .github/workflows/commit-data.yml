@@ -71,15 +71,14 @@ jobs:
         env:
           major_version: "${{ inputs.major-version }}"
           version: "${{ inputs.version }}"
-        id: create-patch
         run: |
           mkdir -p build/patches
+          touch build/patches/.keep
           git diff || :
           git add "data/${major_version}"
           if git diff-index --quiet HEAD ${{ inputs.changed-files }}; then
-            echo "changed=false" >> "${GITHUB_OUTPUT}"
-          else
-            echo "changed=true" >> "${GITHUB_OUTPUT}"
+            echo "Nothing to do"
+            exit
           fi
           git commit -m "data: update ${version}"
           git format-patch -1 -o build/patches
@@ -87,7 +86,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: build-patches
-          path: "build/patches"
+          path: "test_results/build/patches/"
   commit:
     name: Commit and push data
     runs-on: ubunut-latest
@@ -110,8 +109,8 @@ jobs:
           path: build/patches
       - name: Apply patches
         run: |
-          if [ -n "$(find build/patches -type f)" ]; then
-            git am --committer-date-is-author-date build/patches/*
+          if [ -n "$(find build/patches -type f -name '*.patch')" ]; then
+            git am --committer-date-is-author-date build/patches/*.patch
             git push
           fi
 
