@@ -95,10 +95,10 @@ def render(ctx: typer.Context, collection_: str) -> None:
 def issue(ctx: typer.Context, collection_: str) -> None:
     sargs = ctx.ensure_object(Args)
     collection = CollectionName(collection_)
-    has_file_errors = collection in sargs.upstreams_data
+    has_file_errors = collection in sargs.upstreams_data["collections"]
     title = "Community package requirements: sanity tests"
     if has_file_errors:
-        title += "and repository management"
+        title += " and repository management"
     body = render_issue(collection, sargs)
 
     # `repository` shouldn't be None, mypy.
