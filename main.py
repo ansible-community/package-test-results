@@ -9,15 +9,16 @@ from __future__ import annotations
 
 import dataclasses
 import webbrowser
-from collections import Counter, defaultdict
-from collections.abc import Iterable
+from collections import Counter
+from collections.abc import Iterable, Iterator
 from functools import cached_property
 from pathlib import Path
-from typing import TYPE_CHECKING, TypedDict, cast
+from typing import TYPE_CHECKING, TypedDict
 
 import jinja2
 import pyperclip  # type: ignore[import]
 import typer
+from antsibull.sanity_tests import CollectionOutput
 from antsibull.types import CollectionName, make_collection_mapping
 from antsibull_core.yaml import load_yaml_file
 from yarl import URL
@@ -130,29 +131,31 @@ def render_issue(collection: CollectionName, sargs: Args) -> str:
     return env.get_template("issue.md").render(**tvars)
 
 
+def get_error_tuples(
+    sanity: CollectionOutput, upstreams: list[FileErrorOutput] | None
+) -> Iterator[tuple[str | FileError, int]]:
+    for file, test_json in sanity["sanity"]["test_json"].items():
+        yield get_test_name(file), sum(
+            len(r["output"].splitlines()) for r in test_json["results"]
+        )
+    if banned := sanity["sanity"].get("banned_ignore_entries"):
+        yield "BANNED_SANITY", len(banned)
+    if upstreams:
+        yield from get_all_errors(upstreams).items()
+
+
 @app.command()
 def failures(
     ctx: typer.Context,
 ) -> None:
     sargs = ctx.ensure_object(Args)
-    upstreams_data = sargs.upstreams_data["collections"]
-    failed_collectiions: dict[CollectionName, dict[str | FileError, int]] = defaultdict(
-        dict,
-        {
-            collection: {
-                get_test_name(name): sum(
-                    len(r["output"].splitlines()) for r in test_json["results"]
-                )
-                for name, test_json in data["sanity"]["test_json"].items()
-            }
-            for collection, data in sargs.data["collections"].items()
-            if data["failed"]
-        },
-    )
-    for collection, upstream_data in upstreams_data.items():
-        failed_collectiions[collection] |= cast(
-            "dict[str | FileError, int]", get_all_errors(upstream_data)
-        )
+    sanity = sargs.data["collections"]
+    upstreams = sargs.upstreams_data["collections"]
+    failed_collectiions: dict[CollectionName, dict[str | FileError, int]] = {
+        collection: out
+        for collection, sanity_out in sanity.items()
+        if (out := dict(get_error_tuples(sanity_out, upstreams.get(collection))))
+    }
     for collection, test_data in sorted(
         failed_collectiions.items(), key=lambda x: sum(x[1].values())
     ):
