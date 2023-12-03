@@ -38,9 +38,11 @@ jobs:
           path: test_results
           ref: main
       - name: Set up git committer
-        run: |
-          git config --global user.name "Github Actions"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        uses: gotmax23/set-bot-git-user-action@v1.1.0
+        with:
+          bot: github-actions
+          name: "Github Actions"
+          global: true
       - name: Checkout ansible-build-data
         uses: actions/checkout@v4
         with:
@@ -112,9 +114,10 @@ jobs:
           token: "${{ github.token }}"
           ref: main
       - name: Set up git committer
-        run: |
-          git config --global user.name "Github Actions"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        uses: gotmax23/set-bot-git-user-action@v1.1.0
+        with:
+          bot: github-actions
+          name: "Github Actions"
       - name: Download patches
         uses: actions/download-artifact@v3
         with:
