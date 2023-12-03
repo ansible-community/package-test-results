@@ -116,12 +116,14 @@ def render_all(
     add_title: bool = typer.Option(False, "-T", "--add-title"),
 ) -> None:
     sargs = ctx.ensure_object(Args)
-    for collection in sargs.data["collections"]:
+    for collection, data in sargs.data["collections"].items():
+        if not data["failed"]:
+            continue
         render(
             ctx,
             collection,
             add_title,
-            cast(typer.FileTextWrite, (output_dir / f"{collection}.md").open()),
+            cast(typer.FileTextWrite, (output_dir / f"{collection}.md").open("w")),
         )
 
 
