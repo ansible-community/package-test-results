@@ -1,5 +1,5 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 
-Files: data/*/* examples/*
+Files: data/*/* rendered/*/*
 Copyright: Ansible Project Authors
 License: GPL-3.0-or-later
