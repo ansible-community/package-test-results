@@ -20,7 +20,7 @@ import pyperclip  # type: ignore[import]
 import typer
 from antsibull.sanity_tests import CollectionOutput, IgnoreEntry
 from antsibull.types import CollectionName, make_collection_mapping
-from antsibull_core.yaml import load_yaml_file
+from antsibull_core.yaml import load_yaml_file, store_yaml_stream
 from yarl import URL
 
 if TYPE_CHECKING:
@@ -123,6 +123,19 @@ def render_all(
             add_title,
             cast(typer.FileTextWrite, (output_dir / f"{collection}.md").open()),
         )
+
+
+@app.command()
+def sanity_data(
+    ctx: typer.Context,
+    collection_: str,
+    output: typer.FileTextWrite = typer.Option("-", "-o", "--output"),
+) -> None:
+    sargs = ctx.ensure_object(Args)
+    collection = CollectionName(collection_)
+    data = sargs.data["collections"][collection]
+    store_yaml_stream(output, data)
+    output.close()
 
 
 @app.command()
