@@ -97,6 +97,7 @@ def render(
     ctx: typer.Context,
     collection_: str,
     add_title: bool = typer.Option(False, "-T", "--add-title"),
+    output: typer.FileTextWrite = typer.Option("-", "-o", "--output"),
 ) -> None:
     sargs = ctx.ensure_object(Args)
     collection = CollectionName(collection_)
@@ -104,7 +105,8 @@ def render(
     if add_title:
         title = get_issue_title(collection, sargs)
         rendered = f"# {title}\n\n" + rendered.lstrip("\n")
-    print(rendered)
+    print(rendered, file=output)
+    output.close()
 
 
 @app.command()
