@@ -110,6 +110,22 @@ def render(
 
 
 @app.command()
+def render_all(
+    ctx: typer.Context,
+    output_dir: Path = typer.Option(..., "-O", "--output-dir"),
+    add_title: bool = typer.Option(False, "-T", "--add-title"),
+) -> None:
+    sargs = ctx.ensure_object(Args)
+    for collection in sargs.data["collections"]:
+        render(
+            ctx,
+            collection,
+            add_title,
+            cast(typer.FileTextWrite, (output_dir / f"{collection}.md").open()),
+        )
+
+
+@app.command()
 def issue(ctx: typer.Context, collection_: str) -> None:
     sargs = ctx.ensure_object(Args)
     collection = CollectionName(collection_)
