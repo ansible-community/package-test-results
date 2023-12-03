@@ -49,9 +49,18 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: "3.11"
-      - name: Install deps
+      - name: Get ansible-core version
+        id: ansible-core
+        env:
+          data_path: "../ansible-build-data/${{ inputs.major_version }}/ansible-${{ inputs.version }}.deps"
         run: |
-          pip install -r requirements.txt
+          version="$(grep '^_ansible_version:' "${data_path}" | awk '{ print $2 }')"
+          echo "version=${version}" > "${GITHUB_OUTPUT}"
+      - name: Install deps
+        env:
+          ansible_core: "ansible-core==${{ steps.ansible-core.outputs.version }}"
+        run: |
+          pip install -r requirements.txt "${ansible_core}"
       - name: Verify upstreams
         continue-on-error: true
         env:
