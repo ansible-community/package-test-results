@@ -52,7 +52,7 @@ jobs:
       - name: Get ansible-core version
         id: ansible-core
         env:
-          data_path: "../ansible-build-data/${{ inputs.major_version }}/ansible-${{ inputs.version }}.deps"
+          data_path: "../ansible-build-data/${{ inputs.major-version }}/ansible-${{ inputs.version }}.deps"
         run: |
           version="$(grep '^_ansible_version:' "${data_path}" | awk '{ print $2 }')"
           echo "version=${version}" > "${GITHUB_OUTPUT}"
