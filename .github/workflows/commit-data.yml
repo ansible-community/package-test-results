@@ -67,9 +67,11 @@ jobs:
       - name: Verify upstreams
         continue-on-error: true
         env:
+          data_dir: "data/${{ inputs.major-version }}/"
           data_path: "data/${{ inputs.major-version }}/ansible-${{ inputs.version }}-missing-upstreams.yaml"
           tags_path: "../ansible-build-data/${{ inputs.major-version }}/ansible-${{ inputs.version }}-tags.yaml"
         run: |
+          mkdir -p "${data_dir}"
           antsibull-build verify-upstreams \
             -O "${data_path}" --tree-dir build/unpack "${tags_path}"
       - name: Run sanity tests
