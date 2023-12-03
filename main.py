@@ -13,20 +13,18 @@ from collections import Counter
 from collections.abc import Iterable, Iterator
 from functools import cached_property
 from pathlib import Path
-from typing import TYPE_CHECKING, TypedDict, cast
+from typing import TypedDict, cast
 
 import jinja2
 import pyperclip  # type: ignore[import]
 import typer
+from antsibull.from_source.verify import FileError, FileErrorOutput
 from antsibull.sanity_tests import CollectionOutput, IgnoreEntry
+from antsibull.sanity_tests import Output as SanityTestsOutput
+from antsibull.tagging import CollectionTagData
 from antsibull.types import CollectionName, make_collection_mapping
 from antsibull_core.yaml import load_yaml_file, store_yaml_stream
 from yarl import URL
-
-if TYPE_CHECKING:
-    from antsibull.from_source.verify import FileError, FileErrorOutput
-    from antsibull.sanity_tests import Output as SanityTestsOutput
-    from antsibull.tagging import CollectionTagData
 
 app = typer.Typer()
 env = jinja2.Environment(
