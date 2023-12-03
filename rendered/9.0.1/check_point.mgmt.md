@@ -4,7 +4,7 @@
 
 As per the [Ansible community package inclusion requirements][ci-testing], collections must pass `ansible-test sanity` tests. Version `5.1.1` of `check_point.mgmt`, corresponding to the `v5.1.1` tag in this repo, fails one or more of the required sanity tests.
 
-Additionally, the contents in the `v5.1.1` git tag do not match `check_point-mgmt-5.1.1.tar.gz` as uploaded to Ansible Galaxy. For future releases, please make sure that the contents uploaded to Galaxy match the sources that were tagged as that release. See the [Repository management requirements][repo-mgmt] for more information.
+The contents in the `v5.1.1` git tag do not match `check_point-mgmt-5.1.1.tar.gz` as uploaded to Ansible Galaxy. For future releases, please make sure that the contents uploaded to Galaxy match the sources that were tagged as that release. See the [Repository management requirements][repo-mgmt] for more information.
 
 Please see the errors below and address them. If these issues aren't addressed within a reasonable time period, the collection may be subject to [removal from Ansible][removal].
 

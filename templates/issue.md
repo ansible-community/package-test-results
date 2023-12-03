@@ -1,10 +1,12 @@
 {% set artifact = collection_name.replace(".", "-") ~ "-" ~ tag_output.version ~ ".tar.gz" %}
 (Note: This issue was filed in a semi-automated fashion. Let me know if you see errors in this issue.)
 
+{% if test_json or invalid_ignores %}
 As per the [Ansible community package inclusion requirements][ci-testing], collections must pass `ansible-test sanity` tests. Version `{{ tag_output.version }}` of `{{ collection_name }}`, corresponding to the `{{ tag_output.tag }}` tag in this repo, fails one or more of the required sanity tests.
+{% endif %}
 
 {% if file_errors %}
-Additionally, the contents in the `{{ tag_output.tag }}` git tag do not match `{{ artifact }}` as uploaded to Ansible Galaxy. For future releases, please make sure that the contents uploaded to Galaxy match the sources that were tagged as that release. See the [Repository management requirements][repo-mgmt] for more information.
+The contents in the `{{ tag_output.tag }}` git tag do not match `{{ artifact }}` as uploaded to Ansible Galaxy. For future releases, please make sure that the contents uploaded to Galaxy match the sources that were tagged as that release. See the [Repository management requirements][repo-mgmt] for more information.
 {% endif %}
 
 Please see the errors below and address them. If these issues aren't addressed within a reasonable time period, the collection may be subject to [removal from Ansible][removal].
@@ -13,6 +15,7 @@ Thank you for your efforts and for being part of the Ansible package! We appreci
 
 ---
 
+{% if test_json or invalid_ignores %}
 ## Sanity tests
 
 The following tests were run using `ansible-test` version `{{ env_details.ansible_test_version }}`:
@@ -50,6 +53,7 @@ Note that this is only a subset of the required sanity tests. Please make sure y
 ```
 
 Please fix these issues and remove the ignore entries.
+{% endif %}
 {% endif %}
 
 {% if file_errors %}

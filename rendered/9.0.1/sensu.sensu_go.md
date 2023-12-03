@@ -4,7 +4,7 @@
 
 As per the [Ansible community package inclusion requirements][ci-testing], collections must pass `ansible-test sanity` tests. Version `1.14.0` of `sensu.sensu_go`, corresponding to the `v1.14.0` tag in this repo, fails one or more of the required sanity tests.
 
-Additionally, the contents in the `v1.14.0` git tag do not match `sensu-sensu_go-1.14.0.tar.gz` as uploaded to Ansible Galaxy. For future releases, please make sure that the contents uploaded to Galaxy match the sources that were tagged as that release. See the [Repository management requirements][repo-mgmt] for more information.
+The contents in the `v1.14.0` git tag do not match `sensu-sensu_go-1.14.0.tar.gz` as uploaded to Ansible Galaxy. For future releases, please make sure that the contents uploaded to Galaxy match the sources that were tagged as that release. See the [Repository management requirements][repo-mgmt] for more information.
 
 Please see the errors below and address them. If these issues aren't addressed within a reasonable time period, the collection may be subject to [removal from Ansible][removal].
 

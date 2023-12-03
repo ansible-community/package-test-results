@@ -84,11 +84,18 @@ def get_test_name(path: str) -> str:
     return path.removeprefix("ansible-test-sanity-").removesuffix(".json")
 
 
-def get_issue_title(collection: str, sargs: Args) -> str:
+def get_issue_title(collection: CollectionName, sargs: Args) -> str:
+    has_sanity_errors = sargs.data["collections"][collection]["failed"]
     has_file_errors = collection in sargs.upstreams_data["collections"]
-    title = "Community package requirements: sanity tests"
+    title = "Community package requirements: "
+    found: list[str] = []
+    if has_sanity_errors:
+        found.append("sanity tests")
     if has_file_errors:
-        title += " and repository management"
+        found.append("repository management")
+    if not found:
+        raise ValueError("No errors found")
+    title += " and ".join(found)
     return title
 
 
@@ -117,7 +124,12 @@ def render_all(
 ) -> None:
     sargs = ctx.ensure_object(Args)
     for collection, data in sargs.data["collections"].items():
-        if not data["failed"]:
+        # fmt: off
+        if (
+            not data["failed"]
+            and not sargs.upstreams_data["collections"].get(collection)
+        ):
+        # fmt: on
             continue
         render(
             ctx,
