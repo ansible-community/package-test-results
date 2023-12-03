@@ -26,3 +26,5 @@ repos:
   #     - id: mypy
   #       additional_dependencies:
   #         - "antsibull @ https://github.com/gotmax23/antsibull/archive/refs/heads/verify-upstream.tar.gz"
+ci:
+  autofix_prs: false
