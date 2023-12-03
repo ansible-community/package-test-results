@@ -206,9 +206,7 @@ def get_error_tuples(
 
 
 @app.command()
-def failures(
-    ctx: typer.Context,
-) -> None:
+def failures(ctx: typer.Context, bullet: str = "*", reverse: bool = False) -> None:
     sargs = ctx.ensure_object(Args)
     sanity = sargs.data["collections"]
     upstreams = sargs.upstreams_data["collections"]
@@ -218,9 +216,9 @@ def failures(
         if (out := dict(get_error_tuples(sanity_out, upstreams.get(collection))))
     }
     for collection, test_data in sorted(
-        failed_collectiions.items(), key=lambda x: sum(x[1].values())
+        failed_collectiions.items(), key=(lambda x: sum(x[1].values())), reverse=reverse
     ):
-        print("*", collection)
+        print(bullet, collection)
         for name, output_count in sorted(
             test_data.items(), key=lambda x: x[1], reverse=True
         ):
