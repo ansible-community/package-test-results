@@ -13,11 +13,11 @@ repos:
     hooks:
       - id: black
   - repo: https://github.com/PyCQA/isort
-    rev: "5.12.0"
+    rev: "5.13.0"
     hooks:
       - id: isort
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: "v0.1.6"
+    rev: "v0.1.7"
     hooks:
       - id: ruff
   # - repo: https://github.com/pre-commit/mirrors-mypy
@@ -27,7 +27,7 @@ repos:
   #       additional_dependencies:
   #         - "antsibull @ https://github.com/gotmax23/antsibull/archive/refs/heads/verify-upstream.tar.gz"
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: "0.27.2"
+    rev: "0.27.3"
     hooks:
       - id: check-github-workflows
       - id: check-dependabot
