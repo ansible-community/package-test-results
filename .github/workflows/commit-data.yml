@@ -38,7 +38,7 @@ jobs:
           path: test_results
           ref: main
       - name: Set up git committer
-        uses: gotmax23/set-bot-git-user-action@v1.1.0
+        uses: gotmax23/set-bot-git-user-action@v1.2.0
         with:
           bot: github-actions
           name: "Github Actions"
@@ -116,7 +116,7 @@ jobs:
           token: "${{ github.token }}"
           ref: main
       - name: Set up git committer
-        uses: gotmax23/set-bot-git-user-action@v1.1.0
+        uses: gotmax23/set-bot-git-user-action@v1.2.0
         with:
           bot: github-actions
           name: "Github Actions"
