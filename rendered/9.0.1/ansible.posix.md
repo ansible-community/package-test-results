@@ -22,6 +22,9 @@ The following tests were run using `ansible-test` version `2.16.0`:
 
 Note that this is only a subset of the required sanity tests. Please make sure you run them in all in your CI.
 
+### Results
+
+`ansible-test sanity` succeeded, but some required tests were ignored.
 
 ### Invalid test ignores
 

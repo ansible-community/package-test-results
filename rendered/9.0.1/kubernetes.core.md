@@ -29,7 +29,7 @@ The test `ansible-test sanity --test validate-modules` [[explain](https://docs.a
 ``` text
 plugins/modules/helm_info.py:0:0: doc-default-does-not-match-spec: Argument 'release_state' in argument_spec defines default as ([]) but documentation defines default as (None)
 plugins/modules/helm_template.py:0:0: doc-default-does-not-match-spec: Argument 'show_only' in argument_spec defines default as ([]) but documentation defines default as (None)
-plugins/modules/k8s.py:0:0: parameter-type-not-in-doc: Argument 'resource_definition' in argument_spec defines type as <function list_dict_str at 0x7fda754e1120> but documentation doesn't define type
+plugins/modules/k8s.py:0:0: parameter-type-not-in-doc: Argument 'resource_definition' in argument_spec defines type as <function list_dict_str at 0x7fa80a839120> but documentation doesn't define type
 plugins/modules/k8s.py:0:0: return-syntax-error: RETURN.result.contains.error.contains: required key not provided @ data['result']['contains']['error']['contains']. Got None
 plugins/modules/k8s.py:0:0: return-syntax-error: RETURN.result.contains.metadata.contains: required key not provided @ data['result']['contains']['metadata']['contains']. Got None
 plugins/modules/k8s.py:0:0: return-syntax-error: RETURN.result.contains.spec.contains: required key not provided @ data['result']['contains']['spec']['contains']. Got None
@@ -41,11 +41,11 @@ plugins/modules/k8s_log.py:0:0: doc-default-does-not-match-spec: Argument 'label
 plugins/modules/k8s_rollback.py:0:0: doc-default-does-not-match-spec: Argument 'field_selectors' in argument_spec defines default as ([]) but documentation defines default as (None)
 plugins/modules/k8s_rollback.py:0:0: doc-default-does-not-match-spec: Argument 'label_selectors' in argument_spec defines default as ([]) but documentation defines default as (None)
 plugins/modules/k8s_scale.py:0:0: doc-default-does-not-match-spec: Argument 'label_selectors' in argument_spec defines default as ([]) but documentation defines default as (None)
-plugins/modules/k8s_scale.py:0:0: parameter-type-not-in-doc: Argument 'resource_definition' in argument_spec defines type as <function list_dict_str at 0x7fda754e1120> but documentation doesn't define type
+plugins/modules/k8s_scale.py:0:0: parameter-type-not-in-doc: Argument 'resource_definition' in argument_spec defines type as <function list_dict_str at 0x7fa80a839120> but documentation doesn't define type
 plugins/modules/k8s_scale.py:0:0: return-syntax-error: RETURN.result.contains.metadata.contains: required key not provided @ data['result']['contains']['metadata']['contains']. Got None
 plugins/modules/k8s_scale.py:0:0: return-syntax-error: RETURN.result.contains.spec.contains: required key not provided @ data['result']['contains']['spec']['contains']. Got None
 plugins/modules/k8s_scale.py:0:0: return-syntax-error: RETURN.result.contains.status.contains: required key not provided @ data['result']['contains']['status']['contains']. Got None
-plugins/modules/k8s_service.py:0:0: parameter-type-not-in-doc: Argument 'resource_definition' in argument_spec defines type as <function list_dict_str at 0x7fda754e1120> but documentation doesn't define type
+plugins/modules/k8s_service.py:0:0: parameter-type-not-in-doc: Argument 'resource_definition' in argument_spec defines type as <function list_dict_str at 0x7fa80a839120> but documentation doesn't define type
 plugins/modules/k8s_service.py:0:0: return-syntax-error: RETURN.result.contains.metadata.contains: required key not provided @ data['result']['contains']['metadata']['contains']. Got None
 plugins/modules/k8s_service.py:0:0: return-syntax-error: RETURN.result.contains.spec.contains: required key not provided @ data['result']['contains']['spec']['contains']. Got None
 plugins/modules/k8s_service.py:0:0: return-syntax-error: RETURN.result.contains.status.contains: required key not provided @ data['result']['contains']['status']['contains']. Got None

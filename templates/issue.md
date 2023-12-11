@@ -26,9 +26,9 @@ The following tests were run using `ansible-test` version `{{ env_details.ansibl
 
 Note that this is only a subset of the required sanity tests. Please make sure you run them in all in your CI.
 
-{% if test_json %}
 ### Results
 
+{% if test_json %}
 {% for file in test_json.values() %}
 {% for result in file.results %}
 {{ result.message }}
@@ -39,6 +39,8 @@ Note that this is only a subset of the required sanity tests. Please make sure y
 
 {% endfor %}
 {% endfor %}
+{% else %}
+`ansible-test sanity` succeeded, but some required tests were ignored.
 {% endif %}
 
 {% if invalid_ignores %}
