@@ -34,7 +34,6 @@ Note that this is only a subset of the required sanity tests. Please make sure y
 plugins/modules/mysql_db.py validate-modules:parameter-list-no-elements
 plugins/modules/mysql_info.py validate-modules:parameter-list-no-elements
 plugins/modules/mysql_query.py validate-modules:parameter-list-no-elements
-plugins/modules/mysql_user.py validate-modules:undocumented-parameter
 plugins/modules/mysql_variables.py validate-modules:doc-required-mismatch
 ```
 

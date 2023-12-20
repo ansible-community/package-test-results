@@ -32,12 +32,9 @@ Note that this is only a subset of the required sanity tests. Please make sure y
 
 ``` text
 plugins/modules/consul.py validate-modules:doc-missing-type
-plugins/modules/consul.py validate-modules:undocumented-parameter
-plugins/modules/iptables_state.py validate-modules:undocumented-parameter            # params _back and _timeout used by action plugin
 plugins/modules/manageiq_provider.py validate-modules:doc-choices-do-not-match-spec  # missing docs on suboptions
 plugins/modules/manageiq_provider.py validate-modules:doc-missing-type               # missing docs on suboptions
 plugins/modules/manageiq_provider.py validate-modules:parameter-type-not-in-doc      # missing docs on suboptions
-plugins/modules/manageiq_provider.py validate-modules:undocumented-parameter         # missing docs on suboptions
 ```
 
 Please fix these issues and remove the ignore entries.

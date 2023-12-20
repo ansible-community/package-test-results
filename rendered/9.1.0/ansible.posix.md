@@ -32,8 +32,8 @@ Note that this is only a subset of the required sanity tests. Please make sure y
 
 ``` text
 plugins/modules/synchronize.py validate-modules:doc-default-does-not-match-spec
+plugins/modules/synchronize.py validate-modules:nonexistent-parameter-documented
 plugins/modules/synchronize.py validate-modules:parameter-type-not-in-doc
-plugins/modules/synchronize.py validate-modules:undocumented-parameter
 ```
 
 Please fix these issues and remove the ignore entries.
