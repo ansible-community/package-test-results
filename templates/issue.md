@@ -29,6 +29,11 @@ Note that this is only a subset of the required sanity tests. Please make sure y
 ### Results
 
 {% if test_json %}
+> **💡 NOTE:**
+>
+> Check the `[explain]` links below for more information about each test and how to fix failures.
+> See [Sanity Tests: Ignores](https://docs.ansible.com/ansible/latest/dev_guide/testing/sanity/ignores.html) in the dev guide if, after reading the test-specific documentation, you still believe an error is a false positive.
+
 {% for file in test_json.values() %}
 {% for result in file.results %}
 {{ result.message }}
