@@ -24,6 +24,11 @@ Note that this is only a subset of the required sanity tests. Please make sure y
 
 ### Results
 
+> **💡 NOTE:**
+>
+> Check the `[explain]` links below for more information about each test and how to fix failures.
+> See [Sanity Tests: Ignores](https://docs.ansible.com/ansible/latest/dev_guide/testing/sanity/ignores.html) in the dev guide if, after reading the test-specific documentation, you still believe an error is a false positive.
+
 The test `ansible-test sanity --test validate-modules` [[explain](https://docs.ansible.com/ansible-core/2.16/dev_guide/testing/sanity/validate-modules.html)] failed with 311 errors:
 
 ``` text
