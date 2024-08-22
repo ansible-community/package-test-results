@@ -3,7 +3,8 @@
 # GNU General Public License v3.0+ (see LICENSES/GPL-3.0-or-later.txt or
 # https://www.gnu.org/licenses/gpl-3.0.txt)
 
-antsibull @ https://github.com/ansible-community/antsibull/archive/243845bc9d539c1b7f2c9530c916a48df0da01f7.tar.gz
+# First antsibull release with the sanity-tests subcommand
+antsibull >= 0.60.0
 antsibull-core
 jinja2
 pyperclip
