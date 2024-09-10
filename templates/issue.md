@@ -11,6 +11,8 @@ The contents in the `{{ tag_output.tag }}` git tag do not match `{{ artifact }}`
 
 Please see the errors below and address them. If these issues aren't addressed within a reasonable time period, the collection may be subject to [removal from Ansible][removal].
 
+*Please fix the issues identified below and then create a new Galaxy release so the fixes are caught in the next round of automated testing.*
+
 Thank you for your efforts and for being part of the Ansible package! We appreciate it.
 
 ---
