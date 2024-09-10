@@ -1,12 +1,14 @@
 # Community package requirements: sanity tests and repository management
 
-(Note: This issue was filed in a semi-automated fashion. Let me know if you see errors in this issue.)
+(Note: This issue was filed in a semi-automated fashion on behalf of the Ansible Community Steering Committee. Let me know if you see errors in this issue.)
 
 As per the [Ansible community package inclusion requirements][ci-testing], collections must pass `ansible-test sanity` tests. Version `5.2.3` of `check_point.mgmt`, corresponding to the `v5.2.3` tag in this repo, fails one or more of the required sanity tests.
 
 The contents in the `v5.2.3` git tag do not match `check_point-mgmt-5.2.3.tar.gz` as uploaded to Ansible Galaxy. For future releases, please make sure that the contents uploaded to Galaxy match the sources that were tagged as that release. See the [Repository management requirements][repo-mgmt] for more information.
 
 Please see the errors below and address them. If these issues aren't addressed within a reasonable time period, the collection may be subject to [removal from Ansible][removal].
+
+*Please fix the issues identified below and then create a new Galaxy release so the fixes are caught in the next round of automated testing.*
 
 Thank you for your efforts and for being part of the Ansible package! We appreciate it.
 
