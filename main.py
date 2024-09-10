@@ -223,6 +223,7 @@ def failures(ctx: typer.Context, bullet: str = "*", reverse: bool = False) -> No
             test_data.items(), key=lambda x: x[1], reverse=True
         ):
             print(f"    {output_count} {name}")
+    print(f"Total: {len(failed_collectiions)}")
 
 
 if __name__ == "__main__":
