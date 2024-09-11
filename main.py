@@ -121,6 +121,7 @@ def render_all(
     add_title: bool = typer.Option(False, "-T", "--add-title"),
 ) -> None:
     sargs = ctx.ensure_object(Args)
+    output_dir.mkdir(exist_ok=True)
     for collection, data in sargs.data["collections"].items():
         # fmt: off
         if (
