@@ -1,0 +1,343 @@
+collections:
+  awx.awx:
+  - error: WRONG_HASH
+    file: plugins/module_utils/controller_api.py
+  check_point.mgmt:
+  - error: WRONG_HASH
+    file: plugins/module_utils/checkpoint.py
+  - error: WRONG_HASH
+    file: changelogs/.plugin-cache.yaml
+  - error: WRONG_HASH
+    file: changelogs/changelog.yaml
+  - error: WRONG_HASH
+    file: CHANGELOG.rst
+  cisco.intersight:
+  - error: WRONG_HASH
+    file: plugins/modules/intersight_rest_api.py
+  cyberark.pas:
+  - error: WRONG_HASH
+    file: CHANGELOG.md
+  - error: WRONG_HASH
+    file: extensions/eda/plugins/event_source/syslog.py
+  dellemc.enterprise_sonic:
+  - error: WRONG_HASH
+    file: README.md
+  dellemc.openmanage:
+  - error: WRONG_HASH
+    file: tests/unit/plugins/modules/test_ome_device_mgmt_network.py
+  - error: WRONG_HASH
+    file: tests/unit/plugins/modules/test_idrac_certificates.py
+  - error: WRONG_HASH
+    file: tests/unit/plugins/modules/test_ome_network_vlan_info.py
+  - error: WRONG_HASH
+    file: tests/unit/plugins/modules/test_ome_application_network_settings.py
+  ibm.spectrum_virtualize:
+  - error: WRONG_HASH
+    file: playbooks/volume_migration_on_svc_iscsi/vol_migration_vars.txt
+  - error: WRONG_HASH
+    file: playbooks/multi_volume_create_host_mapping_zone_multipath/multiple_vol_creation_zone_map_vars.txt
+  - error: WRONG_HASH
+    file: README.md
+  ibm.storage_virtualize:
+  - error: WRONG_HASH
+    file: changelogs/changelog.yaml
+  - error: WRONG_HASH
+    file: plugins/module_utils/ibm_svc_ssh.py
+  inspur.ispim:
+  - error: WRONG_HASH
+    file: meta/runtime.yml
+  - error: WRONG_HASH
+    file: README.md
+  kubevirt.core:
+  - error: WRONG_HASH
+    file: CHANGELOG.rst
+  - error: WRONG_HASH
+    file: docs/CHANGELOG.rst
+  ovirt.ovirt:
+  - error: WRONG_GALAXY_YML_NAME
+    file: galaxy.yml
+    message: '`@NAMESPACE@.@NAME@` != `ovirt.ovirt`'
+  - error: WRONG_HASH
+    file: build.sh
+  - error: WRONG_HASH
+    file: CHANGELOG.rst
+  - error: WRONG_HASH
+    file: examples/filters/ovirtdiff.yml
+  - error: WRONG_HASH
+    file: examples/filters/vmips.yml
+  - error: WRONG_HASH
+    file: examples/ovirt_ansible_collections.yml
+  - error: WRONG_HASH
+    file: README.md
+  - error: WRONG_HASH
+    file: roles/repositories/examples/ovirt_repositories_release_rpm.yml
+  - error: WRONG_HASH
+    file: roles/repositories/examples/ovirt_repositories_subscription_manager.yml
+  - error: WRONG_HASH
+    file: roles/repositories/README.md
+  - error: WRONG_HASH
+    file: roles/cluster_upgrade/examples/cluster_upgrade.yml
+  - error: WRONG_HASH
+    file: roles/cluster_upgrade/README.md
+  - error: WRONG_HASH
+    file: roles/shutdown_env/examples/shutdown_env.yml
+  - error: WRONG_HASH
+    file: roles/shutdown_env/README.md
+  - error: WRONG_HASH
+    file: roles/disaster_recovery/examples/dr_ovirt_setup.yml
+  - error: WRONG_HASH
+    file: roles/disaster_recovery/examples/dr_play.yml
+  - error: WRONG_HASH
+    file: roles/disaster_recovery/README.md
+  - error: WRONG_HASH
+    file: roles/vm_infra/tasks/create_inventory.yml
+  - error: WRONG_HASH
+    file: roles/vm_infra/tasks/main.yml
+  - error: WRONG_HASH
+    file: roles/vm_infra/tasks/vm_state_present.yml
+  - error: WRONG_HASH
+    file: roles/vm_infra/examples/ovirt_vm_infra_inv.yml
+  - error: WRONG_HASH
+    file: roles/vm_infra/examples/ovirt_vm_infra.yml
+  - error: WRONG_HASH
+    file: roles/vm_infra/README.md
+  - error: WRONG_HASH
+    file: roles/image_template/tasks/qcow2_image.yml
+  - error: WRONG_HASH
+    file: roles/image_template/tasks/glance_image.yml
+  - error: WRONG_HASH
+    file: roles/image_template/examples/ovirt_image_template.yml
+  - error: WRONG_HASH
+    file: roles/image_template/README.md
+  - error: WRONG_HASH
+    file: roles/engine_setup/tests/engine-deploy.yml
+  - error: WRONG_HASH
+    file: roles/engine_setup/tests/engine-upgrade.yml
+  - error: WRONG_HASH
+    file: roles/engine_setup/examples/engine-deploy.yml
+  - error: WRONG_HASH
+    file: roles/engine_setup/examples/engine-upgrade.yml
+  - error: WRONG_HASH
+    file: roles/engine_setup/README.md
+  - error: WRONG_HASH
+    file: roles/remove_stale_lun/examples/remove_stale_lun.yml
+  - error: WRONG_HASH
+    file: roles/remove_stale_lun/README.md
+  - error: WRONG_HASH
+    file: roles/hosted_engine_setup/tasks/create_storage_domain.yml
+  - error: WRONG_HASH
+    file: roles/hosted_engine_setup/tasks/alter_libvirt_default_net_configuration.yml
+  - error: WRONG_HASH
+    file: roles/hosted_engine_setup/tasks/bootstrap_local_vm/02_create_local_vm.yml
+  - error: WRONG_HASH
+    file: roles/hosted_engine_setup/tasks/pre_checks/002_validate_hostname_tasks.yml
+  - error: WRONG_HASH
+    file: roles/hosted_engine_setup/tasks/partial_execution.yml
+  - error: WRONG_HASH
+    file: roles/hosted_engine_setup/tasks/full_execution.yml
+  - error: WRONG_HASH
+    file: roles/hosted_engine_setup/tasks/create_target_vm/03_hosted_engine_final_tasks.yml
+  - error: WRONG_HASH
+    file: roles/hosted_engine_setup/tasks/create_target_vm/01_create_target_hosted_engine_vm.yml
+  - error: WRONG_HASH
+    file: roles/hosted_engine_setup/examples/hosted_engine_deploy_remotehost.yml
+  - error: WRONG_HASH
+    file: roles/hosted_engine_setup/examples/hosted_engine_deploy_localhost.yml
+  - error: WRONG_HASH
+    file: roles/hosted_engine_setup/README.md
+  - error: WRONG_HASH
+    file: roles/infra/tasks/create_infra.yml
+  - error: WRONG_HASH
+    file: roles/infra/tasks/remove_infra.yml
+  - error: WRONG_HASH
+    file: roles/infra/examples/ovirt_infra.yml
+  - error: WRONG_HASH
+    file: roles/infra/examples/ovirt_infra_destroy.yml
+  - error: WRONG_HASH
+    file: roles/infra/README.md
+  - error: WRONG_HASH
+    file: roles/infra/roles/datacenter_cleanup/README.md
+  - error: WRONG_HASH
+    file: roles/infra/roles/permissions/README.md
+  - error: WRONG_HASH
+    file: roles/infra/roles/clusters/README.md
+  - error: WRONG_HASH
+    file: roles/infra/roles/mac_pools/README.md
+  - error: WRONG_HASH
+    file: roles/infra/roles/hosts/tasks/main.yml
+  - error: WRONG_HASH
+    file: roles/infra/roles/hosts/README.md
+  - error: WRONG_HASH
+    file: roles/infra/roles/networks/README.md
+  - error: WRONG_HASH
+    file: roles/infra/roles/datacenters/tasks/main.yml
+  - error: WRONG_HASH
+    file: roles/infra/roles/datacenters/README.md
+  - error: WRONG_HASH
+    file: roles/infra/roles/aaa_jdbc/README.md
+  - error: WRONG_HASH
+    file: roles/infra/roles/external_providers/README.md
+  - error: WRONG_HASH
+    file: roles/infra/roles/storages/README.md
+  - error: WRONG_HASH
+    file: changelogs/changelog.yaml
+  - error: WRONG_HASH
+    file: ovirt-ansible-collection.spec.in
+  - error: WRONG_HASH
+    file: plugins/inventory/ovirt.py
+  - error: WRONG_HASH
+    file: plugins/filter/convert_to_bytes.py
+  - error: WRONG_HASH
+    file: plugins/filter/ovirtvmipv6.yml
+  - error: WRONG_HASH
+    file: plugins/filter/convert_to_bytes.yml
+  - error: WRONG_HASH
+    file: plugins/filter/removesensitivevmdata.yml
+  - error: WRONG_HASH
+    file: plugins/filter/get_ovf_disk_size.yml
+  - error: WRONG_HASH
+    file: plugins/filter/ovirtvmipsv4.yml
+  - error: WRONG_HASH
+    file: plugins/filter/filtervalue.yml
+  - error: WRONG_HASH
+    file: plugins/filter/ovirtdiff.yml
+  - error: WRONG_HASH
+    file: plugins/filter/ovirtvmips.yml
+  - error: WRONG_HASH
+    file: plugins/filter/get_network_xml_to_dict.yml
+  - error: WRONG_HASH
+    file: plugins/filter/ovirtvmip.yml
+  - error: WRONG_HASH
+    file: plugins/filter/ovirtvmipsv6.yml
+  - error: WRONG_HASH
+    file: plugins/filter/ovirtvmipv4.yml
+  - error: WRONG_HASH
+    file: plugins/module_utils/ovirt.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_user_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_vm_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_disk.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_template_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_api_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_nic.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_snapshot.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_storage_vm_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_network_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_nic_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_mac_pool.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_instance_type.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_job.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_host_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_template.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_vnic_profile_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_storage_connection.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_vmpool_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_quota_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_vm.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_cluster_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_tag_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_permission.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_host_network.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_external_provider_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_event_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_disk_profile.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_storage_domain_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_tag.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_vm_os_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_quota.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_affinity_label.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_role.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_group_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_host_pm.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_external_provider.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_host_storage_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_snapshot_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_qos.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_datacenter.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_affinity_group.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_vnic_profile.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_permission_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_host.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_disk_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_cluster.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_datacenter_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_user.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_system_option_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_vmpool.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_network.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_affinity_label_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_storage_template_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_storage_domain.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_event.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_auth.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_scheduling_policy_info.py
+  - error: WRONG_HASH
+    file: plugins/modules/ovirt_group.py
+  sensu.sensu_go:
+  - error: WRONG_HASH
+    file: docs/source/release_notes.rst
+  wti.remote:
+  - error: WRONG_HASH
+    file: docs/cpm_syslog_client_config.rst
+  - error: WRONG_HASH
+    file: docs/cpm_hostname_config.rst
+  - error: WRONG_HASH
+    file: docs/cpm_syslog_server_config.rst
+  - error: WRONG_HASH
+    file: docs/cpm_snmp_config.rst
