@@ -109,7 +109,7 @@ jobs:
           mkdir -p build/patches
           touch build/patches/.keep
           git diff || :
-          git add "data/${major_version}"
+          git add "data/${major_version}" rendered
           if git diff-index --quiet HEAD ${{ inputs.changed-files }}; then
             echo "Nothing to do"
             exit
