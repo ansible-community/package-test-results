@@ -4,7 +4,7 @@
 # https://www.gnu.org/licenses/gpl-3.0.txt)
 
 # First antsibull release with the sanity-tests subcommand
-antsibull >= 0.60.0
+antsibull-build
 antsibull-core
 jinja2
 pyperclip

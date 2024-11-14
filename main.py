@@ -18,12 +18,12 @@ from typing import TypedDict, cast
 import jinja2
 import pyperclip  # type: ignore[import]
 import typer
-from antsibull.from_source.verify import FileError, FileErrorOutput
-from antsibull.sanity_tests import CollectionOutput, IgnoreEntry
-from antsibull.sanity_tests import Output as SanityTestsOutput
-from antsibull.tagging import CollectionTagData
-from antsibull.types import CollectionName, make_collection_mapping
-from antsibull_core.yaml import load_yaml_file, store_yaml_stream
+from antsibull_build.from_source.verify import FileError, FileErrorOutput
+from antsibull_build.sanity_tests import CollectionOutput, IgnoreEntry
+from antsibull_build.sanity_tests import Output as SanityTestsOutput
+from antsibull_build.tagging import CollectionTagData
+from antsibull_build.types import CollectionName, make_collection_mapping
+from antsibull_build_core.yaml import load_yaml_file, store_yaml_stream
 from yarl import URL
 
 app = typer.Typer()
