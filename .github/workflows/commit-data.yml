@@ -23,6 +23,10 @@ on:
         description: Whether to run sanity test or only check upstreams
         type: boolean
         default: true
+      render-issues:
+        description: Whether to render sample issues\
+        type: boolean
+        default: true
 
 jobs:
   generate:
@@ -81,6 +85,22 @@ jobs:
           data_path: "data/${{ inputs.major-version }}/ansible-${{ inputs.version }}-sanity.yaml"
         run: |
           antsibull-build sanity-tests -O "${data_path}" build/unpack/ansible_collections/*/*
+
+      - name: Render sample issues
+        if: "inputs.render-issues"
+        env:
+          sanity_path: "data/${{ inputs.major-version }}/ansible-${{ inputs.version }}-sanity.yaml"
+          missing_upstreams_path: "data/${{ inputs.major-version }}/ansible-${{ inputs.version }}-missing-upstreams.yaml"
+          tags_path: "../ansible-build-data/${{ inputs.major-version }}/ansible-${{ inputs.version }}-tags.yaml"
+          version: "${{ inputs.version }}"
+        run: >-
+          python ./main.py
+              --sanity-data "${sanity_path}"
+              --upstreams-data "${missing_upstreams_path}"
+              --tag-data "${tags_path}"
+            render-all
+              --output-dir "rendered/${version}"
+              --add-title
       - name: Commit and create patch
         env:
           major_version: "${{ inputs.major-version }}"
