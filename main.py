@@ -23,7 +23,7 @@ from antsibull_build.sanity_tests import CollectionOutput, IgnoreEntry
 from antsibull_build.sanity_tests import Output as SanityTestsOutput
 from antsibull_build.tagging import CollectionTagData
 from antsibull_build.types import CollectionName, make_collection_mapping
-from antsibull_build_core.yaml import load_yaml_file, store_yaml_stream
+from antsibull_core.yaml import load_yaml_file, store_yaml_stream
 from yarl import URL
 
 app = typer.Typer()
