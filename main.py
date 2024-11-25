@@ -7,6 +7,7 @@
 
 from __future__ import annotations
 
+import asyncio
 import dataclasses
 import webbrowser
 from collections import Counter
@@ -15,6 +16,7 @@ from functools import cached_property
 from pathlib import Path
 from typing import TypedDict, cast
 
+import aiohttp
 import jinja2
 import pyperclip  # type: ignore[import]
 import typer
@@ -33,6 +35,8 @@ env = jinja2.Environment(
     undefined=jinja2.StrictUndefined,
     loader=jinja2.FileSystemLoader(Path(__file__).resolve().parent / "templates"),
 )
+GITHUB_MAX_ISSUE_SIZE = 65536
+PACKAGE_TEST_RESULTS_URL_TEMPLATE = "https://github.com/ansible-community/package-test-results/blob/main/rendered/{ansible_version}/{collection}.md"
 
 
 def get_all_errors(outputs: Iterable[FileErrorOutput], /) -> Counter[FileError]:
@@ -152,11 +156,22 @@ def sanity_data(
 
 
 @app.command()
-def issue(ctx: typer.Context, collection_: str) -> None:
+def issue(
+    ctx: typer.Context,
+    collection_: str,
+    ansible_version: str | None = typer.Option(None, "-A", "--ansible-version"),
+) -> None:
     sargs = ctx.ensure_object(Args)
     collection = CollectionName(collection_)
     title = get_issue_title(collection, sargs)
-    body = render_issue(collection, sargs)
+    body = render_issue(
+        collection,
+        sargs,
+        max_size=GITHUB_MAX_ISSUE_SIZE if ansible_version else None,
+        read_more_link=(
+            get_read_more_link(collection, ansible_version) if ansible_version else None
+        ),
+    )
 
     # `repository` shouldn't be None, mypy.
     assert (u := sargs.tags_data[collection]["repository"])
@@ -171,7 +186,27 @@ def issue(ctx: typer.Context, collection_: str) -> None:
     webbrowser.open(str(issue_url))
 
 
-def render_issue(collection: CollectionName, sargs: Args) -> str:
+async def _check_url(url: str) -> bool:
+    async with aiohttp.ClientSession() as session:  # noqa: SIM117
+        async with session.head(url) as resp:
+            return resp.ok
+
+
+def get_read_more_link(collection: CollectionName, ansible_version: str) -> str:
+    link = PACKAGE_TEST_RESULTS_URL_TEMPLATE.format(
+        ansible_version=ansible_version, collection=collection
+    )
+    if not asyncio.run(_check_url(link)):
+        raise ValueError(f"read_more_link {link!r} is invalid")
+    return link
+
+
+def render_issue(
+    collection: CollectionName,
+    sargs: Args,
+    max_size: int | None = None,
+    read_more_link: str | None = None,
+) -> str:
     sanity_data = sargs.data["collections"][collection]
     sanity = sanity_data["sanity"]
     test_json = sanity["test_json"]
@@ -189,8 +224,19 @@ def render_issue(collection: CollectionName, sargs: Args) -> str:
         "file_errors": file_errors,
         "env_details": sargs.data["env_details"],
         "ignores_file": sanity.get("ignores_file"),
+        "truncate": False,
     }
-    return env.get_template("issue.md").render(**tvars)
+    rendered = env.get_template("issue.md").render(**tvars)
+    if max_size is not None and len(rendered) > max_size:
+        if read_more_link is None:
+            raise ValueError(
+                "read_more_link must be passed, because the issue body's length"
+                " is greater than max_size"
+            )
+        rendered = env.get_template("issue.md").render(
+            **(tvars | dict(truncate=True, read_more_link=read_more_link))
+        )
+    return rendered
 
 
 def get_error_tuples(

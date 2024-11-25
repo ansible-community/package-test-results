@@ -31,6 +31,11 @@ Note that this is only a subset of the required sanity tests. Please make sure y
 ### Results
 
 {% if test_json %}
+{% if truncate %}
+**Issue truncated. View the [full report]({{ read_more_link }}) for more information.**
+
+Note that you may need to click `View raw` after navigating to the [full report]({{ read_more_link }}) if there are many errors and the report is therefore too large to display on Github.
+{% else %}
 > **💡 NOTE:**
 >
 > Check the `[explain]` links below for more information about each test and how to fix failures.
@@ -46,6 +51,7 @@ Note that this is only a subset of the required sanity tests. Please make sure y
 
 {% endfor %}
 {% endfor %}
+{% endif %}
 {% else %}
 `ansible-test sanity` succeeded, but some required tests were ignored.
 {% endif %}
