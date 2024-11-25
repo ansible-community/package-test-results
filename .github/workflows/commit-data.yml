@@ -95,12 +95,12 @@ jobs:
           version: "${{ inputs.version }}"
         run: >-
           python ./main.py
-              --sanity-data "${sanity_path}"
-              --upstreams-data "${missing_upstreams_path}"
-              --tag-data "${tags_path}"
-            render-all
-              --output-dir "rendered/${version}"
-              --add-title
+          --sanity-data "${sanity_path}"
+          --upstreams-data "${missing_upstreams_path}"
+          --tag-data "${tags_path}"
+          render-all
+          --output-dir "rendered/${version}"
+          --add-title
       - name: Commit and create patch
         env:
           major_version: "${{ inputs.major-version }}"
