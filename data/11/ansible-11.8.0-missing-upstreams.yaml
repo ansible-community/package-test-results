@@ -1,0 +1,59 @@
+collections:
+  awx.awx:
+  - error: WRONG_HASH
+    file: plugins/module_utils/controller_api.py
+  check_point.mgmt:
+  - error: WRONG_HASH
+    file: tests/units/plugins/httpapi/test_checkpoint.py
+  - error: WRONG_HASH
+    file: plugins/modules/cp_mgmt_simple_cluster.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/checkpoint.py
+  - error: WRONG_HASH
+    file: plugins/httpapi/checkpoint.py
+  - error: WRONG_HASH
+    file: changelogs/.plugin-cache.yaml
+  - error: WRONG_HASH
+    file: changelogs/changelog.yaml
+  - error: WRONG_HASH
+    file: CHANGELOG.rst
+  ibm.spectrum_virtualize:
+  - error: WRONG_HASH
+    file: playbooks/volume_migration_on_svc_iscsi/vol_migration_vars.txt
+  - error: WRONG_HASH
+    file: playbooks/multi_volume_create_host_mapping_zone_multipath/multiple_vol_creation_zone_map_vars.txt
+  - error: WRONG_HASH
+    file: README.md
+  inspur.ispim:
+  - error: WRONG_HASH
+    file: meta/runtime.yml
+  - error: WRONG_HASH
+    file: README.md
+  kubevirt.core:
+  - error: WRONG_HASH
+    file: docs/CHANGELOG.rst
+  - error: WRONG_HASH
+    file: CHANGELOG.rst
+  netapp.ontap:
+  - error: WRONG_HASH
+    file: .github/workflows/main.yml
+  sensu.sensu_go:
+  - error: WRONG_HASH
+    file: docs/source/release_notes.rst
+  wti.remote:
+  - error: WRONG_HASH
+    file: meta/runtime.yml
+  - error: WRONG_HASH
+    file: plugins/modules/cpm_web_config.py
+  - error: WRONG_HASH
+    file: plugins/modules/cpm_syslog_client_config.py
+  - error: WRONG_HASH
+    file: plugins/modules/cpm_hostname_config.py
+  - error: WRONG_HASH
+    file: plugins/modules/cpm_config_backup.py
+  - error: WRONG_HASH
+    file: plugins/modules/cpm_config_restore.py
+  - error: WRONG_HASH
+    file: README.md
+  - error: WRONG_HASH
+    file: playbooks/cpm_config/cpm_config_backup.yml
