@@ -1,0 +1,386 @@
+collections:
+  awx.awx:
+  - error: WRONG_HASH
+    file: plugins/module_utils/controller_api.py
+  check_point.mgmt:
+  - error: WRONG_HASH
+    file: tests/units/plugins/httpapi/test_checkpoint.py
+  - error: WRONG_HASH
+    file: plugins/modules/cp_mgmt_if_map_server.py
+  - error: WRONG_HASH
+    file: plugins/modules/cp_mgmt_securemote_dns_server.py
+  - error: WRONG_HASH
+    file: plugins/httpapi/checkpoint.py
+  - error: WRONG_HASH
+    file: changelogs/.plugin-cache.yaml
+  hitachivantara.vspone_object:
+  - error: WRONG_HASH
+    file: README.md
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_s3_encryption_facts.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_licenses_facts.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_user_buckets_facts.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_storage_class_facts.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_storage_class.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_events_facts.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_galaxy_facts.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_s3_user_credentials.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_troubleshooting_facts.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_serial_number.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_jobs_facts.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_kmip.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_storage_component.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_certificates.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_users_facts.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_region_facts.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_certificates_facts.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_license.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_s3_encryption.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_storage_fault_domain.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_storage_fault_domain_facts.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_user_id_facts.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_storage_components_facts.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_kmip_server_facts.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_storage_component_state_update.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_job.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_serial_number_facts.py
+  - error: WRONG_HASH
+    file: plugins/modules/oneobject_node/hv_csrf.py
+  inspur.ispim:
+  - error: WRONG_HASH
+    file: meta/runtime.yml
+  - error: WRONG_HASH
+    file: README.md
+  kubevirt.core:
+  - error: WRONG_HASH
+    file: docs/CHANGELOG.rst
+  - error: WRONG_HASH
+    file: CHANGELOG.rst
+  netapp.storagegrid:
+  - error: WRONG_HASH
+    file: plugins/doc_fragments/netapp.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/netapp.py
+  - error: WRONG_HASH
+    file: plugins/modules/na_sg_org_identity_federation.py
+  - error: WRONG_HASH
+    file: plugins/modules/na_sg_grid_account.py
+  - error: WRONG_HASH
+    file: plugins/modules/na_sg_grid_identity_federation.py
+  - error: WRONG_HASH
+    file: tests/unit/plugins/modules/test_na_sg_grid_identity_federation.py
+  - error: WRONG_HASH
+    file: tests/unit/plugins/modules/test_na_sg_grid_account.py
+  - error: WRONG_HASH
+    file: tests/unit/plugins/modules/test_na_sg_org_identity_federation.py
+  - error: WRONG_HASH
+    file: changelogs/changelog.yaml
+  - error: WRONG_HASH
+    file: README.md
+  - error: WRONG_HASH
+    file: CHANGELOG.rst
+  netbox.netbox:
+  - error: WRONG_HASH
+    file: docs/getting_started/contributing/modules/architecture.rst
+  - error: WRONG_HASH
+    file: docs/plugins/nb_lookup_lookup.rst
+  - error: WRONG_HASH
+    file: docs/plugins/netbox_platform_module.rst
+  - error: WRONG_HASH
+    file: docs/plugins/netbox_prefix_module.rst
+  - error: WRONG_HASH
+    file: docs/plugins/netbox_device_type_module.rst
+  - error: WRONG_HASH
+    file: poetry.lock
+  - error: WRONG_HASH
+    file: .github/workflows/main.yml
+  - error: WRONG_HASH
+    file: tests/integration/targets/v4.2/tasks/netbox_circuit_termination.yml
+  - error: WRONG_HASH
+    file: tests/integration/targets/v4.2/tasks/netbox_service.yml
+  - error: WRONG_HASH
+    file: tests/integration/targets/v4.2/tasks/netbox_tag.yml
+  - error: WRONG_HASH
+    file: tests/integration/targets/inventory-v4.2/compare_inventory_json.py
+  - error: WRONG_HASH
+    file: tests/integration/targets/inventory-v4.1/compare_inventory_json.py
+  - error: WRONG_HASH
+    file: tests/unit/module_utils/test_netbox_base_class.py
+  - error: WRONG_HASH
+    file: plugins/modules/netbox_circuit_termination.py
+  - error: WRONG_HASH
+    file: plugins/modules/netbox_platform.py
+  - error: WRONG_HASH
+    file: plugins/modules/netbox_device_type.py
+  - error: WRONG_HASH
+    file: plugins/modules/netbox_prefix.py
+  - error: WRONG_HASH
+    file: plugins/modules/netbox_custom_field.py
+  - error: WRONG_HASH
+    file: plugins/modules/netbox_tag.py
+  - error: WRONG_HASH
+    file: plugins/lookup/nb_lookup.py
+  - error: WRONG_HASH
+    file: plugins/inventory/nb_inventory.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/netbox_dcim.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/netbox_ipam.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/netbox_utils.py
+  - error: WRONG_HASH
+    file: plugins/doc_fragments/common.py
+  ravendb.ravendb:
+  - error: WRONG_HASH
+    file: .github/workflows/tests_role_ravendb_node.yml
+  - error: WRONG_HASH
+    file: .gitignore
+  - error: WRONG_HASH
+    file: CHANGELOG.md
+  - error: WRONG_HASH
+    file: changelogs/changelog.yml
+  - error: WRONG_HASH
+    file: CODE_OF_CONDUCT.md
+  - error: WRONG_HASH
+    file: LICENSE
+  - error: WRONG_HASH
+    file: meta/runtime.yml
+  - error: WRONG_HASH
+    file: playbooks/cleanup_ravendb.yml
+  - error: WRONG_HASH
+    file: playbooks/databases/ravendb_create_database.yml
+  - error: WRONG_HASH
+    file: playbooks/databases/ravendb_create_database_custom_settings.yml
+  - error: WRONG_HASH
+    file: playbooks/databases/ravendb_delete_database.yml
+  - error: WRONG_HASH
+    file: playbooks/databases/secured/ravendb_create_database_secured.yml
+  - error: WRONG_HASH
+    file: playbooks/databases/secured/ravendb_create_encrypted_database_secured.yml
+  - error: WRONG_HASH
+    file: playbooks/databases/secured/ravendb_delete_database_secured.yml
+  - error: WRONG_HASH
+    file: playbooks/databases/secured_selfsigned/ravendb_create_database_secured_self_signed.yml
+  - error: WRONG_HASH
+    file: playbooks/databases/secured_selfsigned/ravendb_delete_database_secured_self_signed.yml
+  - error: WRONG_HASH
+    file: playbooks/indexes/ravendb_create_index.yml
+  - error: WRONG_HASH
+    file: playbooks/indexes/ravendb_create_multimap_index.yml
+  - error: WRONG_HASH
+    file: playbooks/indexes/ravendb_delete_index.yml
+  - error: WRONG_HASH
+    file: playbooks/indexes/ravendb_disable_index.yml
+  - error: WRONG_HASH
+    file: playbooks/indexes/ravendb_enable_index.yml
+  - error: WRONG_HASH
+    file: playbooks/indexes/ravendb_pause_index.yml
+  - error: WRONG_HASH
+    file: playbooks/indexes/ravendb_reset_index.yml
+  - error: WRONG_HASH
+    file: playbooks/indexes/ravendb_resume_index.yml
+  - error: WRONG_HASH
+    file: playbooks/indexes/ravendb_update_index.yml
+  - error: WRONG_HASH
+    file: playbooks/indexes/secured/ravendb_create_index_secured.yml
+  - error: WRONG_HASH
+    file: playbooks/indexes/secured/ravendb_delete_index_secured.yml
+  - error: WRONG_HASH
+    file: playbooks/indexes/secured/ravendb_disable_index_secured.yml
+  - error: WRONG_HASH
+    file: playbooks/indexes/secured/ravendb_enable_index_secured.yml
+  - error: WRONG_HASH
+    file: playbooks/node/ravendb_add_nodes.yml
+  - error: WRONG_HASH
+    file: playbooks/node/ravendb_add_nodes_secured.yml
+  - error: WRONG_HASH
+    file: playbooks/setup_ravendb.yml
+  - error: WRONG_HASH
+    file: playbooks/setup_ravendb_secured.yml
+  - error: WRONG_HASH
+    file: playbooks/setup_ravendb_secured_self_signed.yml
+  - error: WRONG_HASH
+    file: playbooks/update_ravendb.yml
+  - error: WRONG_HASH
+    file: plugins/doc_fragments/ravendb.py
+  - error: WRONG_HASH
+    file: plugins/modules/database.py
+  - error: WRONG_HASH
+    file: plugins/modules/index.py
+  - error: WRONG_HASH
+    file: plugins/modules/node.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/common_args.py
+  - error: WRONG_HASH
+    file: plugins/README.md
+  - error: WRONG_HASH
+    file: README.md
+  - error: WRONG_HASH
+    file: requirements.txt
+  - error: WRONG_HASH
+    file: roles/ravendb_node/.travis.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/.yamllint
+  - error: WRONG_HASH
+    file: roles/ravendb_node/defaults/main.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/handlers/main.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/meta/argument_specs.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/meta/main.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/cleanup/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/cleanup/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/cleanup/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/cleanup-rhel/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/cleanup-rhel/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/cleanup-rhel/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/rhel-custom-image/Dockerfile
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/secured/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/secured/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/secured/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/secured-rhel/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/secured-rhel/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/secured-rhel/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/secured_self_signed/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/secured_self_signed/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/secured_self_signed/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/unsecured/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/unsecured/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/unsecured/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/unsecured-rhel/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/unsecured-rhel/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/unsecured-rhel/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/update/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/update/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/update/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/update-rhel/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/update-rhel/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/update-rhel/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/README.md
+  - error: WRONG_HASH
+    file: roles/ravendb_node/tasks/debian.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/tasks/install.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/tasks/main.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/tasks/ravendb_python_client_prerequisites_uninstall.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/tasks/ravendb_secure_self_sign_setup.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/tasks/ravendb_secure_setup.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/tasks/redhat.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/tasks/uninstall.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/templates/ravendb.service.j2
+  - error: WRONG_HASH
+    file: roles/ravendb_node/templates/settings.default.json.j2
+  - error: WRONG_HASH
+    file: roles/ravendb_node/templates/settings.default.json.j2.simple
+  - error: WRONG_HASH
+    file: roles/ravendb_node/templates/settings.local_setup.json.j2
+  - error: WRONG_HASH
+    file: roles/ravendb_node/tests/inventory
+  - error: WRONG_HASH
+    file: roles/ravendb_node/tests/test.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/vars/main.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_python_client_prerequisites/defaults/main.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_python_client_prerequisites/handlers/main.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_python_client_prerequisites/meta/main.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_python_client_prerequisites/README.md
+  - error: WRONG_HASH
+    file: roles/ravendb_python_client_prerequisites/tasks/main.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_python_client_prerequisites/tests/inventory
+  - error: WRONG_HASH
+    file: roles/ravendb_python_client_prerequisites/tests/test.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_python_client_prerequisites/vars/main.yml
+  - error: WRONG_HASH
+    file: tests/unit/test_cluster.py
+  - error: WRONG_HASH
+    file: tests/unit/test_database.py
+  - error: WRONG_HASH
+    file: tests/unit/test_index.py
+  - error: WRONG_HASH
+    file: tests/unit/test_index_modes.py
+  wti.remote:
+  - error: WRONG_HASH
+    file: meta/runtime.yml
+  - error: WRONG_HASH
+    file: plugins/modules/cpm_web_config.py
+  - error: WRONG_HASH
+    file: plugins/modules/cpm_syslog_client_config.py
+  - error: WRONG_HASH
+    file: plugins/modules/cpm_hostname_config.py
+  - error: WRONG_HASH
+    file: plugins/modules/cpm_config_backup.py
+  - error: WRONG_HASH
+    file: plugins/modules/cpm_config_restore.py
+  - error: WRONG_HASH
+    file: README.md
+  - error: WRONG_HASH
+    file: playbooks/cpm_config/cpm_config_backup.yml
