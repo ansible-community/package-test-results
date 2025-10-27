@@ -141,7 +141,7 @@ jobs:
           bot: github-actions
           name: "Github Actions"
       - name: Download patches
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: build-patches
           path: build/patches
