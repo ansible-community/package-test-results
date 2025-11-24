@@ -37,7 +37,7 @@ jobs:
         working-directory: test_results
     steps:
       - name: Checkout test_results
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           path: test_results
           ref: main
@@ -48,7 +48,7 @@ jobs:
           name: "Github Actions"
           global: true
       - name: Checkout ansible-build-data
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ansible-community/ansible-build-data
           path: ansible-build-data
@@ -131,7 +131,7 @@ jobs:
       - generate
     steps:
       - name: Checkout test_results
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           token: "${{ github.token }}"
           ref: main
