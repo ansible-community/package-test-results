@@ -117,7 +117,7 @@ jobs:
           git commit -m "data: update ${version}"
           git format-patch -1 -o build/patches
       - name: Upload artifacts
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: build-patches
           path: "test_results/build/patches/"
