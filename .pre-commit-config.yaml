@@ -13,11 +13,11 @@ repos:
     hooks:
       - id: black
   - repo: https://github.com/PyCQA/isort
-    rev: "8.0.0"
+    rev: "8.0.1"
     hooks:
       - id: isort
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: "v0.15.2"
+    rev: "v0.15.4"
     hooks:
       - id: ruff
   - repo: https://github.com/pre-commit/mirrors-mypy
@@ -27,7 +27,7 @@ repos:
         additional_dependencies:
           - "antsibull >= 0.60.0"
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: "0.36.2"
+    rev: "0.37.0"
     hooks:
       - id: check-github-workflows
       - id: check-dependabot
