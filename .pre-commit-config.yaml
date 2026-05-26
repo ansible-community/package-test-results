@@ -33,3 +33,4 @@ repos:
       - id: check-dependabot
 ci:
   autofix_prs: false
+  autoupdate_schedule: monthly
