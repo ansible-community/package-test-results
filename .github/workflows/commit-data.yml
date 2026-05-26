@@ -27,7 +27,8 @@ on:
         description: Whether to render sample issues\
         type: boolean
         default: true
-
+permissions:
+  contents: read
 jobs:
   generate:
     name: Generate data
@@ -41,6 +42,7 @@ jobs:
         with:
           path: test_results
           ref: main
+          persist-credentials: false
       - name: Set up git committer
         uses: gotmax23/set-bot-git-user-action@v1.2.0
         with:
@@ -52,10 +54,11 @@ jobs:
         with:
           repository: ansible-community/ansible-build-data
           path: ansible-build-data
-      - name: Setup Python 3.11
+          persist-credentials: false
+      - name: Setup Python 3.14
         uses: actions/setup-python@v6
         with:
-          python-version: "3.11"
+          python-version: "3.14"
       - name: Get ansible-core version
         id: ansible-core
         env:
@@ -110,7 +113,7 @@ jobs:
           touch build/patches/.keep
           git diff || :
           git add "data/${major_version}" rendered
-          if git diff-index --quiet HEAD ${{ inputs.changed-files }}; then
+          if git diff-index --quiet HEAD; then
             echo "Nothing to do"
             exit
           fi
@@ -135,6 +138,7 @@ jobs:
         with:
           token: "${{ github.token }}"
           ref: main
+          persist-credentials: true
       - name: Set up git committer
         uses: gotmax23/set-bot-git-user-action@v1.2.0
         with:
