@@ -1,0 +1,389 @@
+collections:
+  check_point.mgmt:
+  - error: WRONG_HASH
+    file: tests/units/plugins/httpapi/test_checkpoint.py
+  - error: WRONG_HASH
+    file: plugins/modules/cp_mgmt_if_map_server.py
+  - error: WRONG_HASH
+    file: plugins/modules/cp_mgmt_securemote_dns_server.py
+  - error: WRONG_HASH
+    file: CHANGELOG.rst
+  cisco.meraki:
+  - error: WRONG_HASH
+    file: plugins/modules/networks_appliance_static_routes.py
+  - error: WRONG_HASH
+    file: plugins/modules/networks_appliance_static_routes_info.py
+  - error: WRONG_HASH
+    file: playbooks/networks.yml
+  - error: WRONG_HASH
+    file: playbooks/networks_appliance_static_routes.yml
+  - error: WRONG_HASH
+    file: changelogs/changelog.yaml
+  - error: WRONG_HASH
+    file: CHANGELOG.rst
+  ibm.storage_virtualize:
+  - error: WRONG_HASH
+    file: CHANGELOG.rst
+  kubevirt.core:
+  - error: WRONG_HASH
+    file: docs/CHANGELOG.rst
+  - error: WRONG_HASH
+    file: CHANGELOG.rst
+  netapp.ontap:
+  - error: WRONG_HASH
+    file: changelogs/changelog.yaml
+  - error: WRONG_HASH
+    file: CHANGELOG.rst
+  pcg.alpaca_operator:
+  - error: WRONG_HASH
+    file: README.md
+  - error: WRONG_HASH
+    file: changelogs/changelog.yaml
+  - error: WRONG_HASH
+    file: CHANGELOG.rst
+  ravendb.ravendb:
+  - error: WRONG_HASH
+    file: .github/workflows/tests_role_ravendb_node.yml
+  - error: WRONG_HASH
+    file: .gitignore
+  - error: WRONG_HASH
+    file: CHANGELOG.md
+  - error: WRONG_HASH
+    file: changelogs/changelog.yml
+  - error: WRONG_HASH
+    file: CODE_OF_CONDUCT.md
+  - error: WRONG_HASH
+    file: inventory.ini
+  - error: WRONG_HASH
+    file: LICENSE
+  - error: WRONG_HASH
+    file: meta/runtime.yml
+  - error: WRONG_HASH
+    file: playbooks/cleanup_ravendb.yml
+  - error: WRONG_HASH
+    file: playbooks/connection_string.yml
+  - error: WRONG_HASH
+    file: playbooks/database.yml
+  - error: WRONG_HASH
+    file: playbooks/healthcheck.yml
+  - error: WRONG_HASH
+    file: playbooks/index.yml
+  - error: WRONG_HASH
+    file: playbooks/node.yml
+  - error: WRONG_HASH
+    file: playbooks/setup_ravendb.yml
+  - error: WRONG_HASH
+    file: playbooks/setup_ravendb_secured.yml
+  - error: WRONG_HASH
+    file: playbooks/setup_ravendb_secured_self_signed.yml
+  - error: WRONG_HASH
+    file: plugins/doc_fragments/ravendb.py
+  - error: WRONG_HASH
+    file: plugins/modules/connection_string.py
+  - error: WRONG_HASH
+    file: plugins/modules/database.py
+  - error: WRONG_HASH
+    file: plugins/modules/healthcheck.py
+  - error: WRONG_HASH
+    file: plugins/modules/index.py
+  - error: WRONG_HASH
+    file: plugins/modules/node.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/common_args.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/core/client.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/core/configuration.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/core/deps.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/core/files.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/core/messages.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/core/result.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/core/tls.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/core/validation.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/dto/connection_string.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/dto/database.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/dto/healthcheck.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/dto/index.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/dto/node.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/reconcilers/base.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/reconcilers/connection_string_reconciler.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/reconcilers/database_reconciler.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/reconcilers/healthcheck_reconciler.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/reconcilers/index_reconciler.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/reconcilers/node_reconciler.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/services/cluster_service.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/services/connection_string_service.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/services/database_service.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/services/db_settings_service.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/services/encryption_service.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/services/healthcheck_service.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/services/index_config_service.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/services/index_service.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/services/node_service.py
+  - error: WRONG_HASH
+    file: plugins/module_utils/services/retry_service.py
+  - error: WRONG_HASH
+    file: plugins/README.md
+  - error: WRONG_HASH
+    file: README.md
+  - error: WRONG_HASH
+    file: requirements.txt
+  - error: WRONG_HASH
+    file: roles/ravendb_node/.travis.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/.yamllint
+  - error: WRONG_HASH
+    file: roles/ravendb_node/defaults/main.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/handlers/main.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/meta/argument_specs.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/meta/main.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/cleanup/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/cleanup/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/cleanup/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/cleanup-rhel/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/cleanup-rhel/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/cleanup-rhel/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/debian-11/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/debian-11/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/debian-11/prepare.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/debian-11/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/debian-12/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/debian-12/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/debian-12/prepare.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/debian-12/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/debian-13/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/debian-13/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/debian-13/prepare.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/debian-13/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured/tasks/cs/10_raven.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured/tasks/cs/20_sql.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured/tasks/cs/30_olap.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured/tasks/cs/40_es.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured/tasks/cs/50_queues.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured/tasks/cs/60_sf.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured/tasks/cs/70_ai.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured/tasks/cs.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured/tasks/db/10_create.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured/tasks/db/20_settings.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured/tasks/db/30_delete.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured/tasks/db.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured/tasks/index/10_create.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured/tasks/index/20_update.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured/tasks/index/30_config_and_edges.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured/tasks/index/40_modes_and_reset.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured/tasks/index/50_delete.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured/tasks/index.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured/tasks/init.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured-nodes/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured-nodes/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured-nodes/tasks/db_affinity.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured-nodes/tasks/init.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured-nodes/tasks/node.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/plugins-unsecured-nodes/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/rhel-custom-image/Dockerfile
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/rolling-update/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/rolling-update/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/rolling-update/tasks/failure-paths/cluster-connectivity-fails-on-b.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/rolling-update/tasks/failure-paths/db-online-fail-fast-on-load-error.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/rolling-update/tasks/failure-paths/degraded-db-placement-on-a-c.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/rolling-update/tasks/failure-paths/node-alive-fails-on-b.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/rolling-update/tasks/happy-paths/db-online-ignores-disabled-dbs.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/rolling-update/tasks/happy-paths/db-online-timeout-continue-soft-pass.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/rolling-update/tasks/happy-paths/node-and-cluster-ok.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/rolling-update/tasks/happy-paths/node-cluster-and-db-online-ok.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/rolling-update/tasks/happy-paths/node-ok.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/rolling-update/tasks/init.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/secured/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/secured/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/secured/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/secured-rhel/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/secured-rhel/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/secured-rhel/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/secured_self_signed/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/secured_self_signed/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/secured_self_signed/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/unsecured/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/unsecured/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/unsecured/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/unsecured-rhel/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/unsecured-rhel/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/unsecured-rhel/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/update/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/update/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/update/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/update-rhel/converge.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/update-rhel/molecule.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/molecule/update-rhel/verify.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/README.md
+  - error: WRONG_HASH
+    file: roles/ravendb_node/tasks/debian.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/tasks/download_tarball.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/tasks/install.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/tasks/main.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/tasks/ravendb_python_client_prerequisites_uninstall.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/tasks/ravendb_secure_self_sign_setup.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/tasks/ravendb_secure_setup.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/tasks/redhat.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/tasks/uninstall.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/templates/ravendb.service.j2
+  - error: WRONG_HASH
+    file: roles/ravendb_node/templates/settings.default.json.j2
+  - error: WRONG_HASH
+    file: roles/ravendb_node/templates/settings.default.json.j2.simple
+  - error: WRONG_HASH
+    file: roles/ravendb_node/templates/settings.local_setup.json.j2
+  - error: WRONG_HASH
+    file: roles/ravendb_node/tests/inventory
+  - error: WRONG_HASH
+    file: roles/ravendb_node/tests/test.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_node/vars/main.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_python_client_prerequisites/defaults/main.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_python_client_prerequisites/handlers/main.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_python_client_prerequisites/meta/main.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_python_client_prerequisites/README.md
+  - error: WRONG_HASH
+    file: roles/ravendb_python_client_prerequisites/tasks/main.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_python_client_prerequisites/tests/inventory
+  - error: WRONG_HASH
+    file: roles/ravendb_python_client_prerequisites/tests/test.yml
+  - error: WRONG_HASH
+    file: roles/ravendb_python_client_prerequisites/vars/main.yml
+  - error: WRONG_HASH
+    file: tests/unit/test_cluster.py
+  - error: WRONG_HASH
+    file: tests/unit/test_database.py
+  - error: WRONG_HASH
+    file: tests/unit/test_index.py
+  - error: WRONG_HASH
+    file: tests/unit/test_index_modes.py
+  splunk.es:
+  - error: WRONG_HASH
+    file: changelogs/changelog.yaml
